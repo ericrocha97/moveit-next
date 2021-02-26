@@ -1,5 +1,5 @@
 .overlay {
-	background: rgba(242, 243, 245, 0.8);
+	background: var(--overlay);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,12 +11,12 @@
 }
 
 .container {
-	background: var(--white);
+	background: var(--detail);
 	width: 100%;
 	max-width: 400px;
 	padding: 2rem 3rem;
 	border-radius: 5px;
-	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 60px var(--shadow);
 	text-align: center;
 	position: relative;
 }
@@ -48,4 +48,21 @@
 	border: 0;
 	font-size: 0;
     outline: 0;
+}
+
+.overlay.dark{
+	background: var(--dark-overlay);
+}
+
+.container.dark {
+	background: var(--dark-detail);
+	box-shadow: 0 0 60px var(--dark-shadow);
+}
+
+.container.dark strong {
+	color: var(--dark-title);
+}
+
+.container.dark p {
+	color: var(--dark-text);
 }

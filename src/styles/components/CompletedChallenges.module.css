@@ -2,10 +2,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 3.5rem 0;
+	margin: 1.5rem 0;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #d7d8da;
+	border-bottom: 2px solid var(--gray-line);
 	font-weight: 500;
+	background: var(--detail);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 60px var(--shadow);
 }
 
 .completedChallengesContainer span:first-child {
@@ -14,4 +18,10 @@
 
 .completedChallengesContainer span:last-child {
 	font-size: 1.5rem;
+}
+
+.completedChallengesContainer.dark{
+	border-bottom: 2px solid var(--dark-gray-line);
+	background: var(--dark-detail);
+    box-shadow: 0 0 60px var(--dark-shadow);
 }

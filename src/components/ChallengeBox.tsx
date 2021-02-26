@@ -1,13 +1,15 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import { CountdownContext } from '../contexts/CountdownContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
   const { resetCountdown } = useContext(CountdownContext)
-
+  const { isDarkModActive } = useContext(ThemeContext);
+  const dark = isDarkModActive ? styles.dark : '';
 
   function handleChallengeSucceeded() {
     completeChallenge()
@@ -19,9 +21,9 @@ export function ChallengeBox() {
     resetCountdown()
   }
   return (
-    <div className={styles.challengeBoxContainer}>
+    <div className={`${styles.challengeBoxContainer} ${dark}`}>
       { activeChallenge ? (
-        <div className={styles.challengeActive}>
+        <div className={`${styles.challengeActive} ${dark}`}>
           <header>Ganhe {activeChallenge.amount} xp</header>
 
           <main>
@@ -33,14 +35,14 @@ export function ChallengeBox() {
           <footer>
             <button
               type="button"
-              className={styles.challengeFailedButton}
+              className={`${styles.challengeFailedButton} ${dark}`}
               onClick={handleChallengeFailed}
             >
               Falhei
             </button>
             <button
               type="button"
-              className={styles.challengeSucceededButton}
+              className={`${styles.challengeSucceededButton} ${dark}`}
               onClick={handleChallengeSucceeded}
             >
               Completei
@@ -48,7 +50,7 @@ export function ChallengeBox() {
           </footer>
         </div>
       ) : (
-        <div className={styles.challengeNotActive}>
+        <div className={`${styles.challengeNotActive} ${dark}`}>
           <strong>Finalize um ciclo para receber um desafio</strong>
           <p>
             <img src="icons/level-up.svg" alt="Level Up" />

@@ -27,3 +27,11 @@ span.currentExperience {
 	top: 12px;
 	transform: translateX(-50%);
 }
+
+.experienceBar.dark>div {
+	background: var(--dark-gray-line);
+}
+
+.experienceBar.dark>div>div {
+	background: var(--dark-green);
+}

@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../contexts/CountdownContext';
-
 import { faPlay, faTimes, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from '../styles/components/Countdown.module.css';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 export function Countdown() {
   
@@ -14,15 +14,18 @@ export function Countdown() {
     hasFinished, 
     isActive, 
     startCountdown, 
-    resetCountdown
+    resetCountdown,
   } = useContext(CountdownContext);
+
+  const { isDarkModActive } = useContext(ThemeContext);
+  const dark = isDarkModActive ? styles.dark : '';
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
 
   return (
     <div>
-      <div className={styles.countdownContainer}>
+      <div className={`${styles.countdownContainer} ${dark}`}>
         <div>
           <span>{minuteLeft}</span>
           <span>{minuteRight}</span>
@@ -37,7 +40,7 @@ export function Countdown() {
         {hasFinished ? (
             <button 
                 disabled
-                className={styles.countdownButton}
+                className={`${styles.countdownButton} ${dark}`}
             >
                 Ciclo encerrado <FontAwesomeIcon style={{marginLeft: 8, fontSize: 16, color:'4CD62B' }} icon={faCheckCircle} />
             </button>
@@ -46,7 +49,7 @@ export function Countdown() {
                 { isActive ? (
                     <button 
                         type="button" 
-                        className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
+                        className={`${styles.countdownButton} ${styles.countdownButtonActive} ${dark}`}
                         onClick={resetCountdown}
                     >
                         Abandonar ciclo <FontAwesomeIcon style={{marginLeft: 8, fontSize: 16}} icon={faTimes} />
@@ -54,7 +57,7 @@ export function Countdown() {
                 ) : (
                     <button 
                         type="button" 
-                        className={styles.countdownButton}
+                        className={`${styles.countdownButton} ${dark}`}
                         onClick={startCountdown}
                     >
                         Iniciar um ciclo  <FontAwesomeIcon style={{marginLeft: 8, fontSize: 16}} icon={faPlay} />

@@ -1,6 +1,17 @@
 .profileContainer {
 	display: flex;
 	align-items: center;
+	padding: 0.5rem;
+    background: var(--detail);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 0 60px var(--shadow);
+}
+
+.profileContainer.dark {
+	box-shadow: 0 0 60px var(--dark-shadow);
+	background: var(--dark-detail);
+	color: var(--dark-title);
 }
 
 .profileContainer>img {
@@ -17,6 +28,10 @@
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--title);
+}
+
+.profileContainer.dark div strong {
+	color: var(--dark-title);
 }
 
 .profileContainer div p {
