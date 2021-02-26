@@ -12,7 +12,10 @@ interface ThemeProviderProps {
 export const ThemeContext = createContext({} as ThemeContextData)
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
+
+   
     const [isDarkModActive, setIsDarkModActive]  = useState(true)
+    
 
     function switchTheme() {
         if(isDarkModActive){
