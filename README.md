@@ -8,7 +8,7 @@
 
 > #NLW #NextJS #ReactJS #Moveit
 
-### ✨ [Demo](moveit.ericrocha.dev)
+### ✨ [Demo](https://moveit.ericrocha.dev)
 
 ## Install
 
