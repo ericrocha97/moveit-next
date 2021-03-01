@@ -2,7 +2,7 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ThemeContextData {
     isDarkModActive: boolean;
-    switchTheme: () => void;
+    switchTheme: (isDark : boolean) => void;
 }
 
 interface ThemeProviderProps {
@@ -16,13 +16,11 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
    
     const [isDarkModActive, setIsDarkModActive]  = useState(true)
     
+    
 
-    function switchTheme() {
-        if(isDarkModActive){
-          setIsDarkModActive(false)
-        }else{
-          setIsDarkModActive(true)
-        }
+    function switchTheme(isDark : boolean) {
+          setIsDarkModActive(isDark)
+          localStorage.setItem('darkTheme', JSON.stringify(isDark))
       }
 
       return (
