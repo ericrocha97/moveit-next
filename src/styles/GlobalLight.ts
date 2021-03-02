@@ -55,6 +55,10 @@ export default createGlobalStyle`
             font-size: 87.5%;
         }
     }
+	@media(max-height: 625px) {
+	html {
+		font-size: 87.5%;
+	}
 	body {
         background: var(--background);
         color: var(--text);

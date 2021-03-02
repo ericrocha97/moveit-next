@@ -4,12 +4,13 @@
     background: linear-gradient( var(--detail), var(--background) );
     position: fixed;
     left: 0;
-    box-shadow: 0 0 60px rga(0, 0, 0, 0.05);
+    box-shadow: 0 0 60px var(--shadow);
     z-index: 9;
 }
 
 .sideBar.dark{
     background: linear-gradient( var(--dark-detail), var(--dark-background) );
+    box-shadow: 0 0 60px var(--dark-shadow);
 }
 .icons {
     height: 100%;
