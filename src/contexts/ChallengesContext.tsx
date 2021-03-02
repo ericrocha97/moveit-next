@@ -68,18 +68,16 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
 
     setActiveChallenge(challenge)
     new Audio('/notification.mp3').play();
-    navigator.serviceWorker.register('sw.js');
-    navigator.serviceWorker.getRegistration().then(function(reg) {
-      var options = {
-        body: 'Here is a notification body!',
-        vibrate: [100, 50, 100],
-        data: {
-          dateOfArrival: Date.now(),
-          primaryKey: 1
-        }
-      };
-      reg.showNotification('Hello world!', options);
-    });
+    //TODO: verificar como exibir notificação no android sem ocorrer erros.
+    /*if(Notification.permission === 'granted') {
+      var notification = new Notification('Novo desafio 🎉', { 
+        body: `Valendo ${challenge.amount}xp!`,
+        icon: '/favicon.png'
+      })
+      notification.onclick = () => {
+        window.focus();
+      }
+    }*/
     
   }
 
