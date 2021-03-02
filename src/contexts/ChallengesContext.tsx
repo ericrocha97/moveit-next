@@ -69,14 +69,18 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
     setActiveChallenge(challenge)
     new Audio('/notification.mp3').play();
     navigator.serviceWorker.register('sw.js');
-    navigator.serviceWorker.ready.then(function(registration) {
-      registration.showNotification('Vibration Sample', {
-        body: 'Buzz! Buzz!',
-        vibrate: [200, 100, 200, 100, 200, 100, 200],
-        tag: 'vibration-sample'
-      });
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      var options = {
+        body: 'Here is a notification body!',
+        vibrate: [100, 50, 100],
+        data: {
+          dateOfArrival: Date.now(),
+          primaryKey: 1
+        }
+      };
+      reg.showNotification('Hello world!', options);
     });
-
+    
   }
 
   function resetChallenge() {
