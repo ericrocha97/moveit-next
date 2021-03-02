@@ -23,18 +23,21 @@
 }
 
 .challengeNotActive strong {
+	margin: 0 1rem;
 	font-size: 1.5rem;
 	font-weight: 500;
 	line-height: 1.4;
 }
 
 .challengeNotActive p {
+	font-size: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	line-height: 1.4;
 	max-width: 70%;
 	margin-top: 3rem;
+
 }
 
 .challengeNotActive p img {
@@ -48,11 +51,11 @@
 }
 
 .challengeActive header {
-	color: var(--blue);
-	font-weight: 600;
-	font-size: 1.25rem;
-	padding: 0 2rem 1.5rem;
-	border-bottom: 1px solid var(--gray-line);
+	padding: 1.7rem 3.5rem ;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-bottom: 1px solid var(--gray-line);
 }
 
 .challengeActive.dark header{
@@ -61,18 +64,19 @@
 }
 
 .challengeActive main {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	padding: 1.5rem 2rem ;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .challengeActive main strong {
 	font-size: 2rem;
-	font-weight: 600;
-	color: var(--title);
-	margin: 1.5rem 0 1rem;
+    font-weight: 600;
+    color: var(--title);
+    margin: 1.5rem 0 1rem;
 }
 
 .challengeActive.dark main strong {
@@ -87,6 +91,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
+	
 }
 
 .challengeActive footer button {
@@ -120,4 +125,10 @@
 
 .challengeActive footer button.challengeSucceededButton:hover {
 	background: var(--green-dark);
+}
+
+@media(max-width: 900px) {
+    .challengeNotActive strong {
+        font-size: 2rem;
+    }
 }

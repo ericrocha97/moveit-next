@@ -7,13 +7,15 @@ import { ExperienceBar } from '../components/ExperienceBar'
 import { ChallengeBox } from '../components/ChallengeBox'
 import { Countdown } from '../components/Countdown'
 import { Profile } from '../components/Profile'
-import { ThemeSwitch } from '../components/ThemeSwitch'
 
 import styles from '../styles/pages/Home.module.css'
 
 import { CountdownProvider } from '../contexts/CountdownContext'
 import { ChallengesProvider, ChallengesContext } from '../contexts/ChallengesContext'
 import { ThemeContext } from '../contexts/ThemeContext'
+import { SideBar } from '../components/SideBar'
+import GlobalStyledLight from '../styles/GlobalLight';
+import GlobalStyledDark from '../styles/GlobalDark';
 
 interface HomeProps {
   level: number;
@@ -26,19 +28,31 @@ export default function Home(props: HomeProps) {
   const dark = isDarkModActive ? styles.dark : '';
   
   return (
+    <>
+    {
+      isDarkModActive ? (
+        <GlobalStyledDark />
+      )
+      :
+      (
+        <GlobalStyledLight />
+      )
+    }
+    
     <ChallengesProvider 
       level={props.level} 
       currentExperience={props.currentExperience} 
       challengesCompleted={props.challengesCompleted}
     >   
+    
       <div className={`${styles.body} ${dark}`}>
+      <SideBar/>
         <div className={`${styles.container} ${dark}`}>
             <Head>
               <title>Início | move.it</title>
             </Head>
 
             <ExperienceBar />
-            <ThemeSwitch />
             <CountdownProvider>
               <section>
                 <div>
@@ -54,6 +68,7 @@ export default function Home(props: HomeProps) {
           </div>
         </div>
     </ChallengesProvider>
+    </>
   )
 }
 

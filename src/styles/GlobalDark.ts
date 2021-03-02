@@ -1,10 +1,13 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+import { createGlobalStyle } from 'styled-components';
 
-:root {
+
+export default createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
 	--detail: #fff;
 	--background: #F2F3F5;
 	--gray-line: #DCDDE0;
@@ -41,41 +44,30 @@
 	--dark-button-text: #fff;
 	--dark-border-number: #f0f1f3;
 	--dark-overlay: rgba(42, 43, 45, 0.8);
-}
-
-
-
-@media(max-width: 1080px) {
-	html {
-		font-size: 93.75%;
-	}
-}
-
-@media(max-width: 720px) {
-	html {
-		font-size: 87.5%;
-	}
-}
-
-@media(max-height: 650px) {
-	html {
-	  font-size: 89.25%;
-	}
-}
-
-
-body,
-input,
-textarea,
-button {
-	font: 400 1rem 'Inter', sans-serif;
-}
-
-button {
-	cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
+} 
+    @media(max-width: 1080px) {
+        html{
+            font-size: 93.75%;
+        }
+    }
+    @media(max-width: 720px) {
+        html{
+            font-size: 87.5%;
+        }
+    }
+	body {
+        background: var(--dark-background);
+        color: var(--dark-text);
+    }
+	
+    body, input, textarea, button {
+        font: 400 1rem "Inter", sans-serif;
+    }
+    button {
+        cursor: pointer;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+`;

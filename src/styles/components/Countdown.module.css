@@ -117,3 +117,7 @@
 	cursor: not-allowed;
 	border-bottom: solid 5px var(--dark-green);
 }
+
+.vectorIcon {
+    margin-left: 1rem;
+}
