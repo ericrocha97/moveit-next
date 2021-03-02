@@ -68,6 +68,14 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
 
     setActiveChallenge(challenge)
     new Audio('/notification.mp3').play();
+    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.ready.then(function(registration) {
+      registration.showNotification('Vibration Sample', {
+        body: 'Buzz! Buzz!',
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        tag: 'vibration-sample'
+      });
+    });
 
   }
 
