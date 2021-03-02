@@ -59,6 +59,7 @@ export default createGlobalStyle`
 	html {
 		font-size: 87.5%;
 	}
+	}
 	body {
         background: var(--background);
         color: var(--text);
