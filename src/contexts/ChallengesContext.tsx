@@ -71,12 +71,8 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
 
     if(Notification.permission === 'granted') {
       var notification = new Notification('Novo desafio 🎉', { 
-        body: `Valendo ${challenge.amount}xp!`,
-        icon: '/favicon.png'
+        body: `Valendo ${challenge.amount}xp!`
       })
-      notification.onclick = () => {
-        window.focus();
-      }
     }
   }
 
