@@ -2,7 +2,7 @@
 	height: 100%;
 	background: var(--detail);
 	border-radius: 5px;
-	box-shadow: 0 0 60px var(--shadow);
+	box-shadow: 0 0 5px var(--shadow);
 	padding: 1.5rem 2rem;
 	display: flex;
 	flex-direction: column;
@@ -13,7 +13,7 @@
 
 .challengeBoxContainer.dark {
 	background: var(--dark-detail);
-	box-shadow: 0 0 60px var(--dark-shadow);
+	box-shadow: 0 0 5px var(--dark-shadow);
 }
 
 .challengeNotActive {
@@ -24,13 +24,13 @@
 
 .challengeNotActive strong {
 	margin: 0 1rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: 500;
 	line-height: 1.4;
 }
 
 .challengeNotActive p {
-	font-size: 1rem;
+	font-size: 1.30rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -54,7 +54,7 @@
 	padding: 1.7rem 3.5rem ;
     color: var(--blue);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     border-bottom: 1px solid var(--gray-line);
 }
 
@@ -85,6 +85,7 @@
 
 .challengeActive main p {
 	line-height: 1.5;
+	font-size: 1.20rem;
 }
 
 .challengeActive footer {
@@ -102,7 +103,7 @@
 	border: 0;
 	border-radius: 5px;
 	color: var(--button-text);
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 600;
     outline: 0;
 }

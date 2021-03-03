@@ -39,6 +39,10 @@
         grid-template-rows: 1.2fr 1fr;
         gap: 4rem;
     }
+    .container section>div:last-child{
+        
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 800px) {

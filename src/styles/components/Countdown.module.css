@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: space-evenly;
     background: var(--detail);
-    box-shadow: 0 0 60px var(--shadow);
+    box-shadow: 0 0 5px var(--shadow);
     border-radius: 5px;
     font-size: 8.5rem;
     text-align: center;
@@ -24,7 +24,7 @@
 
 .countdownContainer.dark>div {
     background: var(--dark-detail);
-    box-shadow: 0 0 60px var(--dark-shadow);
+    box-shadow: 0 0 5px var(--dark-shadow);
 }
 
 .countdownContainer>div span {

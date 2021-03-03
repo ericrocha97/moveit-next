@@ -9,7 +9,7 @@
 	background: var(--detail);
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 60px var(--shadow);
+    box-shadow: 0 0 5px var(--shadow);
 }
 
 .completedChallengesContainer span:first-child {
@@ -23,5 +23,5 @@
 .completedChallengesContainer.dark{
 	border-bottom: 2px solid var(--dark-gray-line);
 	background: var(--dark-detail);
-    box-shadow: 0 0 60px var(--dark-shadow);
+    box-shadow: 0 0 5px var(--dark-shadow);
 }

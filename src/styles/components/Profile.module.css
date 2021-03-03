@@ -5,11 +5,11 @@
     background: var(--detail);
     border-radius: 5px;
     padding: 0.5rem;
-    box-shadow: 0 0 60px var(--shadow);
+    box-shadow: 0 0 5px var(--shadow);
 }
 
 .profileContainer.dark {
-	box-shadow: 0 0 60px var(--dark-shadow);
+	box-shadow: 0 0 5px var(--dark-shadow);
 	background: var(--dark-detail);
 	color: var(--dark-title);
 }

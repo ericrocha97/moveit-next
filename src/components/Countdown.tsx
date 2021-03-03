@@ -42,7 +42,7 @@ export function Countdown() {
                 disabled
                 className={`${styles.countdownButton} ${dark}`}
             >
-                Ciclo encerrado <FontAwesomeIcon style={{marginLeft: 8, fontSize: 20, color:'4CD62B' }} icon={faCheckCircle} />
+                Ciclo encerrado <FontAwesomeIcon style={{marginLeft: 8, fontSize: 24, color:'4CD62B' }} icon={faCheckCircle} />
             </button>
         ) : (
             <>
@@ -52,7 +52,7 @@ export function Countdown() {
                         className={`${styles.countdownButton} ${styles.countdownButtonActive} ${dark}`}
                         onClick={resetCountdown}
                     >
-                        Abandonar ciclo <FontAwesomeIcon style={{marginLeft: 8, fontSize: 20}} icon={faTimes} />
+                        Abandonar ciclo <FontAwesomeIcon style={{marginLeft: 8, fontSize: 24}} icon={faTimes} />
                     </button>
                 ) : (
                     <button 
@@ -60,7 +60,7 @@ export function Countdown() {
                         className={`${styles.countdownButton} ${dark}`}
                         onClick={startCountdown}
                     >
-                        Iniciar um ciclo  <FontAwesomeIcon style={{marginLeft: 8, fontSize: 20}} icon={faPlay} />
+                        Iniciar um ciclo  <FontAwesomeIcon style={{marginLeft: 8, fontSize: 24}} icon={faPlay} />
                     </button>
                 ) }
             </>

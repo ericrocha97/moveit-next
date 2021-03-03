@@ -56,10 +56,10 @@ export default createGlobalStyle`
         }
     }
 	@media(max-height: 625px) {
-	html {
-		font-size: 87.5%;
+		html {
+			font-size: 86%;
+		}
 	}
-}
 	body {
         background: var(--dark-background);
         color: var(--dark-text);
