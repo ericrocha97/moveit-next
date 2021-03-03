@@ -34,6 +34,9 @@ export function ThemeSwitch() {
         uncheckedIcon={false}
         height={16}
         width={50}
+        onHandleColor="#252627"
+        boxShadow="0px 0px 5px rgba(0, 0, 0, 0.6)"
+        activeBoxShadow="0px 0px 10px rgba(0, 0, 0, 0.6)"
         handleDiameter={25}
         offColor="#252627"
         onColor="#f2f3f5"

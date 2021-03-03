@@ -1,121 +1,119 @@
 .countdownContainer {
-	display: flex;
-	align-items: center;
-	font-family: Rajdhani;
-	font-weight: 600;
-	color: var(--title);
+    display: flex;
+    align-items: center;
+    font-family: Rajdhani;
+    font-weight: 600;
+    color: var(--title);
 }
 
 .countdownContainer.dark {
-	color: var(--dark-title);
+    color: var(--dark-title);
 }
 
 .countdownContainer>div {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	background: var(--detail);
-	box-shadow: 0 0 60px var(--shadow);
-	border-radius: 5px;
-	font-size: 8.5rem;
-	text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--detail);
+    box-shadow: 0 0 60px var(--shadow);
+    border-radius: 5px;
+    font-size: 8.5rem;
+    text-align: center;
 }
 
 .countdownContainer.dark>div {
-	background: var(--dark-detail);
-	box-shadow: 0 0 60px var(--dark-shadow);
+    background: var(--dark-detail);
+    box-shadow: 0 0 60px var(--dark-shadow);
 }
 
 .countdownContainer>div span {
-	flex: 1;
+    flex: 1;
 }
 
 .countdownContainer>div span:first-child {
-	border-right: 1px solid var(--border-number);
+    border-right: 1px solid var(--border-number);
 }
 
 .countdownContainer>div span:last-child {
-	border-left: 1px solid var(--border-number);
+    border-left: 1px solid var(--border-number);
 }
 
 .countdownContainer.dark>div span:first-child {
-	border-right: 1px solid var(--dark-border-number);
+    border-right: 1px solid var(--dark-border-number);
 }
 
 .countdownContainer.dark>div span:last-child {
-	border-left: 1px solid var(--dark-border-number);
+    border-left: 1px solid var(--dark-border-number);
 }
 
 .countdownContainer>span {
-	font-size: 6.25rem;
-	margin: 0 0.5rem;
+    font-size: 6.25rem;
+    margin: 0 0.5rem;
 }
 
 .countdownButton {
-	width: 100%;
-	height: 5rem;
-	margin-top: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 0;
-	border-radius: 5px;
-	background: var(--blue);
-	color: var(--button-text);
-	font-size: 1.25rem;
-	font-weight: 600;
-	transition: background-color 0.2s;
-	outline: 0;
+    width: 100%;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 5px;
+    background: var(--blue);
+    color: var(--button-text);
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    outline: 0;
 }
 
 .countdownButton.dark {
-	color: var(--dark-button-text);
-	background: var(--dark-blue);
+    color: var(--dark-button-text);
+    background: var(--dark-blue);
 }
 
 .countdownButton:not(:disabled):hover {
-	background: var(--blue-dark);
+    background: var(--blue-dark);
 }
 
 .countdownButtonActive {
-	background: var(--detail);
-	color: var(--title);
+    background: var(--detail);
+    color: var(--title);
 }
 
 .countdownButtonActive:not(:disabled):hover {
-	background: var(--red);
-	color: var(--detail);
+    background: var(--red);
+    color: var(--detail);
 }
 
 .countdownButton:disabled {
-	background: var(--detail);
-	color: var(--text);
-	cursor: not-allowed;
-	border-bottom: solid 5px var(--green);
+    background: var(--detail);
+    color: var(--text);
+    cursor: not-allowed;
+    border-bottom: solid 5px var(--green);
 }
 
-
-
 .countdownButton.dark:not(:disabled):hover {
-	background: var(--dark-blue-dark);
+    background: var(--dark-blue-dark);
 }
 
 .countdownButtonActive.dark {
-	background: var(--dark-detail);
-	color: var(--dark-title);
+    background: var(--dark-detail);
+    color: var(--dark-title);
 }
 
 .countdownButtonActive.dark:not(:disabled):hover {
-	background: var(--dark-red);
-	color: var(--dark-detail);
+    background: var(--dark-red);
+    color: var(--dark-detail);
 }
 
 .countdownButton.dark:disabled {
-	background: var(--dark-detail);
-	color: var(--dark-text);
-	cursor: not-allowed;
-	border-bottom: solid 5px var(--dark-green);
+    background: var(--dark-detail);
+    color: var(--dark-text);
+    cursor: not-allowed;
+    border-bottom: solid 5px var(--dark-green);
 }
 
 .vectorIcon {

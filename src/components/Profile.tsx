@@ -10,9 +10,9 @@ export function Profile() {
   const dark = isDarkModActive ? styles.dark : '';
   return (
     <div className={`${styles.profileContainer} ${dark}`}>
-      <img src="https://github.com/ericrocha97.png" alt="Eric Rocha" />
+      <img src="https://image.shutterstock.com/image-vector/profile-photo-vector-placeholder-pic-600w-535853263.jpg" alt="Eric Rocha" />
       <div>
-        <strong>Eric Rocha</strong>
+        <strong>User</strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}

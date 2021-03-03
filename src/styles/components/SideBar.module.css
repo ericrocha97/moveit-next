@@ -1,17 +1,18 @@
 .sideBar {
     height: 100vh;
     width: 7rem;
-    background: linear-gradient( var(--detail), var(--background) );
+    background: linear-gradient( var(--detail), var(--background));
     position: fixed;
     left: 0;
     box-shadow: 0 0 60px var(--shadow);
     z-index: 9;
 }
 
-.sideBar.dark{
-    background: linear-gradient( var(--dark-detail), var(--dark-background) );
+.sideBar.dark {
+    background: linear-gradient( var(--dark-detail), var(--dark-background));
     box-shadow: 0 0 60px var(--dark-shadow);
 }
+
 .icons {
     height: 100%;
     width: 100%;
@@ -21,6 +22,7 @@
     flex-direction: column;
     padding: 2rem 0rem;
 }
+
 .menu {
     position: relative;
     left: 0;
@@ -30,7 +32,7 @@
     cursor: pointer;
 }
 
-.menu > div {
+.menu>div {
     margin-bottom: 1rem;
 }
 
@@ -45,6 +47,11 @@
 .iconActive {
     border-left: 5px solid var(--blue);
 }
+
+.iconActive svg path {
+    stroke: var(--blue);
+}
+
 @media(max-width: 900px) {
     .sideBar {
         width: 6rem;
@@ -59,18 +66,18 @@
         width: 100%;
         padding: 0 1.5rem;
         height: 6rem;
-        background: linear-gradient(to right, var(--detail), var(--background) );
+        background: linear-gradient(to right, var(--detail), var(--background));
         top: 0;
     }
-    .sideBar.dark{
-        background: linear-gradient( var(--dark-detail), var(--dark-background) );
+    .sideBar.dark {
+        background: linear-gradient( var(--dark-detail), var(--dark-background));
     }
     .icons {
         top: 0;
         flex-direction: row;
         margin: 0 1rem;
     }
-    .sideBar > img {
+    .sideBar>img {
         margin-left: 0.25rem;
     }
     .menu {
