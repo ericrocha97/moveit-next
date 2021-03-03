@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/favicon192.png"></link>
-          <meta name="theme-color" content="#fff" />
+          <meta name="theme-color" content="#794BC4" />
         </Head>
         <body>
           <Main />

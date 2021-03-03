@@ -18,8 +18,8 @@ export default createGlobalStyle`
 	--red-dark: #9B2A3C;
 	--green: #4CD62B;
 	--green-dark: #30891B;
-	--blue: #5965E0;
-	--blue-dark: #4953B8;
+	--blue: #794BC4;
+	--blue-dark: #613C9D;
 	--blue-twitter: #2aa9E0;
 	--shadow: rgba(0, 0, 0, 0.05);
 	--button-text: #fff;
@@ -37,8 +37,8 @@ export default createGlobalStyle`
 	--dark-red-dark: #9B2A3C;
 	--dark-green: #4CD62B;
 	--dark-green-dark: #30891B;
-	--dark-blue: #5965E0;
-	--dark-blue-dark: #4953B8;
+	--dark-blue: #794BC4;
+	--dark-blue-dark: #613C9D;
 	--dark-blue-twitter: #2aa9E0;
 	--dark-shadow: rgba(255, 255, 255, 0.05);
 	--dark-button-text: #fff;
