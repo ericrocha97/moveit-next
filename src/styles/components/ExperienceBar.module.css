@@ -55,7 +55,7 @@
 .experienceBar>div span.currentExperience,
 .experienceBar>div span.currentExperience div.arrowExperience {
     background: var(--detail);
-    filter: blur(0.3px);
+    /*filter: blur(0.3px);*/
 }
 
 .experienceBar.dark>div span.currentExperience.dark,

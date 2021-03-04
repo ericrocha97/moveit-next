@@ -67,7 +67,18 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
     const challenge = challenges[randomChallengeIndex];
 
     setActiveChallenge(challenge)
-    new Audio('/notification.mp3').play();
+
+    //para funcionar em alguns navegadores (ios)
+    var audio = new Audio('/notification.mp3');
+    var playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        //
+      })
+      .catch(error => {
+        //console.error(error);
+      });
+    }
     //TODO: verificar como exibir notificação no android sem ocorrer erros.
     /*if(Notification.permission === 'granted') {
       var notification = new Notification('Novo desafio 🎉', { 
