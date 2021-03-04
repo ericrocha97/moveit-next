@@ -43,9 +43,9 @@ export function ChallengesProvider({ children , ...rest }: ChallengesProviderPro
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
-  useEffect(() => {
+  /*useEffect(() => {
     Notification.requestPermission()
-  }, [])
+  }, [])*/
 
   useEffect(() => {
     Cookies.set('level',String(level));
